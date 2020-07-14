@@ -36,9 +36,9 @@
         </p>
         </td>
         <td>
-            {{#each scene.participants as |participant|}}
-            <a href="/char/{{participant.name}}">{{participant.name}}</a>
-            {{/each}}
+            {{#each scene.participants as |participant p| ~}}
+	    {{#if p}}, {{/if}}<a href="/char/{{participant.name}}">{{participant.name}}</a>
+            {{~/each}}
         </td>
     </tr>
 {{/each}}
